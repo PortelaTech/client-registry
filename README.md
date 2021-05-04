@@ -45,13 +45,13 @@ GitHub Actions is used to run tests and feature files are in the /features folde
 
 ## Portela
 
-Run HAPI, Elasticsearch and Kibana in docker: 
+### Run HAPI, Elasticsearch and Kibana in docker
 
 ```
 docker-compose -f ./docker-compose.cicd.yml up
 ```
 
-Build and run the client locally:
+### Build and run the client locally
 
 ```
 cd server                                                   
@@ -59,13 +59,59 @@ npm install
 NODE_ENV=development node lib/app.js
 ```
 
-Log in locally
+### Log in locally
 
 ```
 Visit the UI at: https://localhost:3000/crux
 Default username: root@intrahealth.org
 Default password: intrahealth
 ```
+
+### Load the DB
+
+The /tests/uploadCSV.js script is used to upload the CSV data in the /tests directory.
+
+If using OpenHIM, then change the auth options and the IP address/hostname in /tests/uploadCSV
+
+```
+# make a copy to modify
+cp uploadCSV.js uploadCSV_mychanges.js
+```
+
+The defaults are:
+```js
+const options = {
+url: 'http://localhost:5001/Patient',
+auth,
+json: entry.resource,
+};
+```
+
+Edit uploadCSV_mychanges.js. If not running OpenHIM then change:
+* remove `auth` and change it to `agentOptions`
+* Change the IP address/hostname as required, for example for Docker: 'https://localhost:3000/Patient'.
+
+After the edits, the code block looks like this:
+```js
+const options = {
+url: 'https://localhost:3000/Patient',
+agentOptions,
+json: entry.resource,
+};
+```
+
+Notice the https as without OpenHIM the OpenCR Service encrypts the connections using TLS instead of OpenHIM doing so.
+
+While in the /tests directory, ensure that OpenCR is running and run the script, with the required argument of the CSV:
+
+```bash
+sudo node uploadCSV_mychanges.js uganda_data_v21_20201501.csv
+```
+
+!!! caution
+    The script may take several hours to process all of the records.
+
+
 
 ## About
 
