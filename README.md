@@ -42,6 +42,31 @@ A major round of investment in OpenCR involved support of the Data Aggregation S
 
 GitHub Actions is used to run tests and feature files are in the /features folder. E2E tests require that the full application stack be stood up. Docker is used to stand up the application stack for E2E tests inside GitHub Actions. All tests and reports are open and under the Actions tab on this page. The maintainers would appreciate further contributions to testing.
 
+
+## Portela
+
+Run HAPI, Elasticsearch and Kibana in docker: 
+
+```
+docker-compose -f ./docker-compose.cicd.yml up
+```
+
+Build and run the client locally:
+
+```
+cd server                                                   
+npm install
+NODE_ENV=development node lib/app.js
+```
+
+Log in locally
+
+```
+Visit the UI at: https://localhost:3000/crux
+Default username: root@intrahealth.org
+Default password: intrahealth
+```
+
 ## About
 
 OpenCR was developed by IntraHealth International with support from PEPFAR through the USAID MEASURE Evaluation Project. Technical direction was provided by CDC. 
