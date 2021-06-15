@@ -188,9 +188,7 @@ fs.createReadStream(path.resolve(__dirname, '', csvFile))
                 password: 'openmrs'
               };
               const options = {
-                url: 'https://localhost:8080/fhir/Patient',
-                // auth,
-                agentOptions,
+                url: 'http://localhost:8080/fhir/Patient',
                 json: entry.resource,
               };
               request.post(options, (err, res, body) => {

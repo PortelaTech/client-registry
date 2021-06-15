@@ -2,7 +2,7 @@ const winston = require('winston');
 const moment = require('moment');
 require('winston-daily-rotate-file');
 const fs = require('fs');
-const logDir = '/var/log';
+const logDir = "."; // '/var/log';
 const logPrefix = 'openclientregistry-';
 const maxLogFiles = 10;
 const logDatePattern = 'YYYY-MM-DD-HH';
