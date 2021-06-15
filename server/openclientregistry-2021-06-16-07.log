@@ -1,0 +1,129 @@
+2021-06-16 07:00:15 [32minfo[39m: [32mRunning client registry as a stand alone[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mChecking if all elasticsearch plugins are installed[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mServer is running and listening on port: 3000[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mLoading CRBrokenMatch.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mSaving StructureDefinition - CRBrokenMatch[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mAll plugins are available[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRBrokenMatch: 200[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRBrokenMatch/_history/1[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mLoading CRPatient.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mSaving StructureDefinition - CRPatient[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mJaro winkler loaded successfully[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRPatient: 200[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRPatient/_history/1[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mLoading OCRUser.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mSaving StructureDefinition - OCRUser[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUser: 200[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUser/_history/1[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mLoading OCRUserDetails.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mSaving StructureDefinition - OCRUserDetails[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUserDetails: 200[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUserDetails/_history/1[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mLoading Patient.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:00:15 [32minfo[39m: [32mSaving StructureDefinition - Patient[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/Patient: 200[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/Patient/_history/1[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mLoading person-username.SearchParameter.json into FHIR server...[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mSaving SearchParameter - ocr-person-username[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/SearchParameter/ocr-person-username: 200[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/SearchParameter/ocr-person-username/_history/1[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mLoading PatientRelationship.json into FHIR server...[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mSaving Basic - patientreport[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/Basic/patientreport: 200[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/Basic/patientreport/_history/1[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mLoading admin.OCRUser.json into FHIR server...[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mSaving Person - default-admin-user[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/Person/default-admin-user: 200[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mhttp://localhost:8080/fhir/Person/default-admin-user/_history/1[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mDone loading required resources[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Basic/patientreport from server[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mprocessing relationship ID patientreport[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mSetting maximum compilation rate[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mmaximum compilation rate updated successfully[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mCreating analyzer into elasticsearch for index patients[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mAnalyzer already exist into elasticsearch, not creating[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mAdding mappings into elasticsearch for index patients[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mMappings added successfully into elasticsearch[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient/_history?_since=2021-06-16T06%3A53%3A51 from server[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mWritting resource data for resource Patient into elastic search[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mDone Writting resource data for resource patients into elastic search[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mUpdating config file[39m
+2021-06-16 07:00:16 [32minfo[39m: [32mDone updating config file[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mRunning client registry as a stand alone[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mChecking if all elasticsearch plugins are installed[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mNow run server[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mServer is running and listening on port: 3000[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mLoading CRBrokenMatch.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mSaving StructureDefinition - CRBrokenMatch[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRBrokenMatch: 200[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRBrokenMatch/_history/1[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mLoading CRPatient.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mSaving StructureDefinition - CRPatient[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mAll plugins are available[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRPatient: 200[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/CRPatient/_history/1[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mLoading OCRUser.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mSaving StructureDefinition - OCRUser[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUser: 200[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUser/_history/1[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mLoading OCRUserDetails.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mSaving StructureDefinition - OCRUserDetails[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mJaro winkler loaded successfully[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUserDetails: 200[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/OCRUserDetails/_history/1[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mLoading Patient.StructureDefinition.xml into FHIR server...[39m
+2021-06-16 07:03:01 [32minfo[39m: [32mSaving StructureDefinition - Patient[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/Patient: 200[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/StructureDefinition/Patient/_history/1[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mLoading person-username.SearchParameter.json into FHIR server...[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mSaving SearchParameter - ocr-person-username[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/SearchParameter/ocr-person-username: 200[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/SearchParameter/ocr-person-username/_history/1[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mLoading PatientRelationship.json into FHIR server...[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mSaving Basic - patientreport[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/Basic/patientreport: 200[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/Basic/patientreport/_history/1[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mLoading admin.OCRUser.json into FHIR server...[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mSaving Person - default-admin-user[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/Person/default-admin-user: 200[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mhttp://localhost:8080/fhir/Person/default-admin-user/_history/1[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mDone loading required resources[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Basic/patientreport from server[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mprocessing relationship ID patientreport[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mSetting maximum compilation rate[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mmaximum compilation rate updated successfully[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mCreating analyzer into elasticsearch for index patients[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mAnalyzer already exist into elasticsearch, not creating[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mAdding mappings into elasticsearch for index patients[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mMappings added successfully into elasticsearch[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient/_history?_since=2021-06-16T07%3A00%3A16 from server[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mWritting resource data for resource Patient into elastic search[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mDone Writting resource data for resource patients into elastic search[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mUpdating config file[39m
+2021-06-16 07:03:02 [32minfo[39m: [32mDone updating config file[39m
+2021-06-16 07:55:05 [32minfo[39m: [32mReceived a request to count match issues[39m
+2021-06-16 07:55:05 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_tag=http%3A%2F%2Fopenclientregistry.org%2Ffhir%2FmatchIssues%7CpotentialMatches%2Chttp%3A%2F%2Fopenclientregistry.org%2Ffhir%2FmatchIssues%7CconflictMatches&_summary=count from server[39m
+2021-06-16 07:55:05 [32minfo[39m: [32mReturning 0 match issues[39m
+2021-06-16 07:55:50 [32minfo[39m: [32mSuccessfully Authenticated user root@intrahealth.org[39m
+2021-06-16 07:55:50 [32minfo[39m: [32mReceived a request to count match issues[39m
+2021-06-16 07:55:50 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_tag=http%3A%2F%2Fopenclientregistry.org%2Ffhir%2FmatchIssues%7CpotentialMatches%2Chttp%3A%2F%2Fopenclientregistry.org%2Ffhir%2FmatchIssues%7CconflictMatches&_summary=count from server[39m
+2021-06-16 07:55:50 [32minfo[39m: [32mReturning 0 match issues[39m
+2021-06-16 07:55:50 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:55:50 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea from server[39m
+2021-06-16 07:55:51 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:55:51 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea from server[39m
+2021-06-16 07:55:58 [32minfo[39m: [32mGetting http://localhost:8080/fhir/DocumentReference from server[39m
+2021-06-16 07:55:58 [32minfo[39m: [32mReceived a request to get CSV report[39m
+2021-06-16 07:56:00 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_tag=http%3A%2F%2Fopenclientregistry.org%2Ffhir%2FmatchIssues%7CpotentialMatches%2Chttp%3A%2F%2Fopenclientregistry.org%2Ffhir%2FmatchIssues%7CconflictMatches from server[39m
+2021-06-16 07:56:00 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:56:00 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea from server[39m
+2021-06-16 07:56:01 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:56:01 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea from server[39m
+2021-06-16 07:56:30 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:56:30 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea&family%3Acontains=acile from server[39m
+2021-06-16 07:56:37 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:56:37 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea&family%3Acontains=acile from server[39m
+2021-06-16 07:57:08 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:57:08 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea&family%3Acontains=acile&given%3Acontains=zuwena from server[39m
+2021-06-16 07:57:12 [32minfo[39m: [32mReceived a request to get data for resource Patient[39m
+2021-06-16 07:57:12 [32minfo[39m: [32mGetting http://localhost:8080/fhir/Patient?_count=10&_total=accurate&_tag%3Anot=5c827da5-4858-4f3d-a50c-62ece001efea&family%3Acontains=acile&given%3Acontains=zuwena from server[39m

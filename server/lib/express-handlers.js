@@ -1,7 +1,4 @@
 'use strict';
-/*global process, __dirname*/
-const express = require('express');
-const bodyParser = require('body-parser');
 const prerequisites = require('./prerequisites');
 const medUtils = require('openhim-mediator-utils');
 const jwt = require('jsonwebtoken');
@@ -13,40 +10,9 @@ const logger = require('./winston');
 const config = require('./config');
 const mediatorConfig = require(`${__dirname}/../config/mediator`);
 
-const userRouter = require('./routes/user');
-const fhirRoutes = require('./routes/fhir');
-const matchRoutes = require('./routes/match');
-const csvRoutes = require('./routes/csv');
-const configRoutes = require('./routes/config');
-
-const serverOpts = {
-  key: fs.readFileSync(`${__dirname}/../serverCertificates/server_key.pem`),
-  cert: fs.readFileSync(`${__dirname}/../serverCertificates/server_cert.pem`),
-  requestCert: true,
-  rejectUnauthorized: false,
-  ca: [fs.readFileSync(`${__dirname}/../serverCertificates/server_cert.pem`)]
-};
-
-if (config.get('mediator:register')) {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
-}
-
-generalMixin.removeDir(`${__dirname}/../gui/tmp`);
-
 let authorized = false;
-/**
- * @returns {express.app}
- */
-function appRoutes() {
-  const app = express();
-  app.set('trust proxy', true);
-  app.use(bodyParser.json({
-    limit: '10Mb',
-    type: ['application/fhir+json', 'application/json+fhir', 'application/json']
-  }));
-  app.use('/crux', express.static(`${__dirname}/../gui`));
 
-  const jwtValidator = function (req, res, next) {
+const jwtValidator = function (req, res, next) {
     if (!req.path.startsWith('/ocrux')) {
       return next();
     }
@@ -87,9 +53,8 @@ function appRoutes() {
         }
       });
     }
-  };
-
-  function certificateValidity(req, res, next) {
+};
+const certificateValidity =   function(req, res, next) {
     if (req.path.startsWith('/ocrux')) {
       return next();
     }
@@ -110,33 +75,13 @@ function appRoutes() {
       return res.status(401).send(`Sorry, you need to provide a client certificate to continue.`);
     }
     next();
-  }
-
-  function cleanReqPath (req, res, next) {
+};
+const cleanReqPath = function(req, res, next) {
     req.url = req.url.replace('ocrux/', '');
     return next();
-  }
-  app.use(jwtValidator);
-  if (!config.get('mediator:register')) {
-    app.use(certificateValidity);
-  }
-  app.use(cleanReqPath);
-  app.use('/user', userRouter);
-  app.use('/fhir', fhirRoutes);
-  app.use('/match', matchRoutes);
-  app.use('/csv', csvRoutes);
-  app.use('/config', configRoutes);
-
-  return app;
-}
-
-/**
- * start - starts the mediator
- *
- * @param  {Function} callback a node style callback that is called once the
- * server is started
- */
-function reloadConfig(data, callback) {
+};
+//  start the mediator
+const reloadConfig = function (data, callback) {
   const tmpFile = `${__dirname}/../config/tmpConfig.json`;
   fs.writeFile(tmpFile, JSON.stringify(data, 0, 2), err => {
     if (err) {
@@ -145,9 +90,8 @@ function reloadConfig(data, callback) {
     config.file(tmpFile);
     return callback();
   });
-}
-
-function start(callback) {
+};
+const start = function (callback) {
   if (config.get('mediator:register')) {
     logger.info('Running client registry as a mediator');
     medUtils.registerMediator(config.get('mediator:api'), mediatorConfig, err => {
@@ -228,13 +172,13 @@ function start(callback) {
       callback(server);
     });
   }
-}
+};
 
-exports.start = start;
-
-if (!module.parent) {
-  // if this script is run directly, start the server
-  start(() =>
-    logger.info(`Server is running and listening on port: ${config.get('app:port')}`)
-  );
-}
+module.exports = {
+    jwtValidator,
+    certificateValidity,
+    cleanReqPath,
+    reloadConfig,
+    start,
+  }
+  

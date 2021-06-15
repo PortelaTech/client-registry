@@ -33,3 +33,6 @@ ansible.p12
 
 # venv
 venv/
+
+*.log
+

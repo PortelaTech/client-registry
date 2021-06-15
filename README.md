@@ -51,21 +51,6 @@ GitHub Actions is used to run tests and feature files are in the /features folde
 docker-compose -f ./docker-compose.cicd.yml up
 ```
 
-### Build and run the client locally
-
-```
-cd server                                                   
-npm install
-NODE_ENV=development node lib/app.js
-```
-
-### Log in locally
-
-```
-Visit the UI at: https://localhost:3000/crux
-Default username: root@intrahealth.org
-Default password: intrahealth
-```
 
 ### Load the DB
 
@@ -94,7 +79,7 @@ Edit uploadCSV_mychanges.js. If not running OpenHIM then change:
 After the edits, the code block looks like this:
 ```js
 const options = {
-url: 'https://localhost:3000/Patient',
+url: 'http://localhost:8080/Patient',
 agentOptions,
 json: entry.resource,
 };
@@ -108,9 +93,21 @@ While in the /tests directory, ensure that OpenCR is running and run the script,
 sudo node uploadCSV_mychanges.js uganda_data_v21_20201501.csv
 ```
 
-!!! caution
-    The script may take several hours to process all of the records.
+### Build and run the client locally
 
+```
+cd server                                                   
+npm install
+NODE_ENV=development node lib/express-server.js
+```
+
+### Log in locally
+
+```
+Visit the UI at: https://localhost:4000/crux
+Default username: root@intrahealth.org
+Default password: intrahealth
+```
 
 
 ## About
